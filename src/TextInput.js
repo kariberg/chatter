@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { AiOutlineUp } from "react-icons/ai";
 
 function TextInput(props) {
   const [text, setText] = useState('')
@@ -21,7 +22,10 @@ function keyPressed(e){
       onChange={e=> setText(e.target.value)}
       onKeyPress={keyPressed}
     />
-    <button onClick={sendMessage}>
+    <button onClick={sendMessage} disabled={!text} className="send-button">
+      <AiOutlineUp title="send" 
+        style={{minWidth:'0.9rem'}} 
+      />
     </button>
   </footer>
 }

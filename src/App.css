@@ -19,6 +19,7 @@
   font-size:1.2rem;
   color:white;
   font-weight: bold;
+  margin-bottom:1rem;
 }
 .logo{
   height:1.8rem;
@@ -32,32 +33,45 @@
 .text-input{
   background:rgba(0,0,0,0.3);
   border-top:1px solid white;
+  margin-top:1rem;
   height:3.5rem;
   display:flex;
   justify-content:center;
   align-items:center;
 }
-button{
+.send-button{
   position:absolute;
   right:1.5rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   border-radius:100%;
   width: 1.75rem;
   height: 1.75rem;
   background-color:white;
-  background-image: url(./img/up-arrow.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size:cover;
+  outline:none;
+  cursor: pointer;
+}
+.send-button[disabled]{
+  background:rgb(176, 176, 176);
+  cursor: default;
+}
+.messages{
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1;
+  overflow: auto;
+}
+.message-row{
+  width:100%;
 }
 .message{
-  position:absolute;
-  bottom:5rem;
   width:fit-content;
   padding:0.75rem 1rem;
   background-color:black;
   border-radius:1.2rem;
   color:white;
-  margin: 1.5rem 2rem;
+  margin: 0.3rem 2rem;
   text-align:left;
 }
 .arrow-left {
@@ -70,13 +84,37 @@ button{
   border-right:1rem solid black;
   margin: 0rem 1.5rem;
 }
-input{
+input {
   font: 1rem Karla;
   color:white;
   background-color:rgba(0,0,0,0.8);
   border-radius:1.2rem;
+  border:none;
   width:100vw;
   margin:0 1.5rem;
   height:1.75rem;
   padding:0 1rem;
+  outline:none;
+}
+.name-picker {
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  font-size:0.95rem;
+}
+.name-picker input {
+  width:10rem;
+  margin-right:0rem;
+}
+.name-picker button {
+  border-radius:10%;
+  border: 1px solid white;
+  background:none;
+  font: bold 0.9rem "Karla";
+  color:white;
+  margin-left:1rem;
+  padding:0.5rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
